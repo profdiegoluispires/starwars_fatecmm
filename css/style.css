@@ -1,0 +1,23 @@
+.intro {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    text-align: center;
+    padding: 0 1em;
+}
+
+#board {
+    position: absolute;
+    left: 50%;
+    margin-left: -9em;
+    width: 18em;
+}
+
+.star {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    background-color: white;
+}
