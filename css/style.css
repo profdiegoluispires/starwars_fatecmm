@@ -44,6 +44,47 @@ body {
     left: 50%;
     margin-left: -9em;
     width: 18em;
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    transform: perspective(300px) rotateX(25deg);
+    transform-origin: 50% 100%;
+    text-align: justify;
+    font-size: 100%;
+    font-weight: bold;
+    overflow: hidden;
+    height: 50em;
+    bottom: 0;
+}
+
+p {
+    color: #FFFF82;
+}
+
+#board:after {
+    position: absolute;
+    content: '  ';
+    bottom: 60%;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+.conteudo {
+    animation: scroll 150s linear 16s;
+    position: absolute;
+    top: 100%;
+}
+
+#title, #subtitle {
+    text-align: center;
+}
+
+@keyframes scroll {
+    0% {
+        top: 100%;
+    }
+    100% {
+        top: -170%;
+    }
 }
 
 .star {
@@ -77,5 +118,77 @@ body {
         opacity: 0;
         transform: translate(-50%, -50%) scale(0.1);
         width: 400px;
+    }
+}
+
+@media (max-width: 400px) {
+    #board,.intro {
+        font-size: 120%;
+    }
+
+    .logo {
+        top: 50%;
+        left: 50%;
+    }
+
+    @keyframes logo {
+        0% {
+            transform: translate(-50%, -50%) scale(2.75);
+            width: 50px;
+            opacity: 1;
+        }
+        100% {
+            transform: translate(-50%, -50%) scale(0.1);
+            width: 50px;
+            opacity: 0;
+        }
+    }
+}
+
+@media (min-width: 400.01px) and (max-width: 600px)  {
+    #board,.intro {
+        font-size: 120%;
+    }
+
+    .logo {
+        top: 50%;
+        left: 50%;
+    }
+
+    @keyframes logo {
+        0% {
+            transform: translate(-50%, -50%) scale(2.75);
+            width: 80px;
+            opacity: 1;
+        }
+        100% {
+            transform: translate(-50%, -50%) scale(0.1);
+            width: 80px;
+            opacity: 0;
+        }
+    }
+}
+
+@media (min-width: 600.01px) {
+    #board,.intro {
+        font-size: 180%;
+    }
+
+    .logo {
+        top: 50%;
+        left: 50%;
+    }
+
+    @keyframes logo {
+        0% {
+            transform: translate(-50%, -50%) scale(2.75);
+            width: 200px;
+            opacity: 1;
+        }
+        100% {
+            transform: translate(-50%, -50%) scale(0.1);
+            width: 200px;
+            opacity: 0;
+        }
     }
 }
