@@ -45,5 +45,3 @@ $(window).on('resize', function(){
 setTimeout(function () {
     document.getElementById("audio").play();
 }, 7900);
-
-
